@@ -1,0 +1,32 @@
+{
+  "name": "@kennanhunter/alert-client",
+  "version": "0.1.0",
+  "description": "Client for kennan.dev's alert ingestion API.",
+  "license": "MIT",
+  "type": "module",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": ["dist", "README.md"],
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "typecheck": "tsc --noEmit",
+    "prepublishOnly": "npm run build"
+  },
+  "engines": { "node": ">=18" },
+  "devDependencies": {
+    "typescript": "^5.6.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kennanhunter/alert-client.git"
+  },
+  "keywords": ["alerts", "discord", "webhook"],
+  "publishConfig": { "access": "public" }
+}
